@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { ServiceProvider, useTheme } from "contexts";
 import { ThemeProvider } from "@mui/material/styles";
@@ -9,7 +10,9 @@ export const DefaultLayout = () => {
   return (
     <ThemeProvider theme={Themes.defaultTheme(theme)}>
       <ServiceProvider>
-        <Outlet />
+        <Box>
+          <Outlet />
+        </Box>
       </ServiceProvider>
     </ThemeProvider>
   );
